@@ -1,6 +1,6 @@
 import streamlit as st
 
-if st.sidebar("Quellen"):
+with st.sidebar("Quellen"):
     st.title("Quellen")
     st.markdown("https://www.bpb.de/themen/asien/indien \[...\] 24.9.2025")
 
