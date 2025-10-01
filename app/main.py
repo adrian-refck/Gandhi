@@ -12,7 +12,7 @@ st.title("Willkommen zu Gandhis Leben")
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    auswhal1 = st.bottom("Audioinformation", type="primary" , width="stretch")
+    auswahl1 = st.bottom("Audioinformation", type="primary" , width="stretch")
 
 with col2:
     auswahl2 = st.bottom("Testinformationen" , type="primary" , width="stretch")
@@ -20,7 +20,7 @@ with col2:
 with col3:
     auswahl3 = st.bottom("Quiz" , type="primary" , width="stretch")
 
-if auswhal1:
+if auswahl1:
     st.write("Lade Audioinformationen...")
     st.audio("audio/gandhi.mp3")
 
