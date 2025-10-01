@@ -12,13 +12,13 @@ st.title("Willkommen zu Gandhis Leben")
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    auswahl1 = st.bottom("Audioinformation", type="primary" , width="stretch")
+    auswahl1 = st.button("Audioinformation", type="primary" , width="stretch")
 
 with col2:
-    auswahl2 = st.bottom("Testinformationen" , type="primary" , width="stretch")
+    auswahl2 = st.button("Testinformationen" , type="primary" , width="stretch")
 
 with col3:
-    auswahl3 = st.bottom("Quiz" , type="primary" , width="stretch")
+    auswahl3 = st.button("Quiz" , type="primary" , width="stretch")
 
 if auswahl1:
     st.write("Lade Audioinformationen...")
