@@ -4,8 +4,15 @@ import streamlit as st
 with st.sidebar:
     st.title("Quellen")
     st.markdown("https://www.bpb.de/themen/asien/indien \[...\] 24.9.2025")
-
-
+    st.markdown("https://www.bpb.de/shop/zeitschriften \[...\] 24.9.2025")
+    st.markdown("https://www.deutschlandfunk.de/70-jahre-nach-dem-tod-was-von-mahatma-gandhi-in-indien-100.html \[...\] 24.9.2025")
+    st.markdown("https://www.planet-wissen.de/geschichte/menschenrechte \[..\] 24.9.2025")
+    st.subheader("Bildquellen")
+    st.markdown("https://www.bpb.de/cache/images/0/327610_galerie_lightbox_box_1000x666.jpg?93070")
+    st.markdown("https://www.bpb.de/cache/images/3/227933_original.jpg?5837F")
+    st.markdown("https://www.hanisauland.de/system/files/17705.jpg")
+    st.markdown("https://media04.meinbezirk.at/article/2013/11/27/8/4543038_XXL.jpg")
+    st.markdown("https://www.bpb.de/cache/images/2/327612_galerie_lightbox_box_1000x666.jpg?83411")
 
 st.title("Willkommen zu Gandhis Leben")
  
