@@ -29,7 +29,7 @@ with col3:
 
 if auswahl1:
     st.write("Lade Audioinformationen...")
-    st.audio("audio/gandhi.mp3")
+    st.audio("/workspaces/Gandhi/app/sounds/rel4.mp3", format="audio/mp3")
 
 if auswahl2:
     st.write("Lade Testinformationen...")
@@ -66,7 +66,7 @@ if auswahl3:
     st.header("Quiz zu Gandhis Leben")
     frage1 = st.radio(
         "In welchem Jahr wurde Mahatma Gandhi geboren?",
-        ("1869", "1879", "1889", "1899")
+        ("0", "1869", "1879", "1889", "1899")
     )
     if frage1 == "1869":
         st.write("Richtig! Gandhi wurde 1869 geboren.")
