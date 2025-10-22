@@ -79,12 +79,12 @@ if st.session_state.get("page") == "quiz":
     st.header("Quiz zu Gandhis Leben")
     frage1 = st.radio(
         "In welchem Jahr wurde Mahatma Gandhi geboren?",
-        ("0", "1869", "1879", "1889", "1899")
+        ("1861", "1869", "1879", "1889", "1899")
     )
     if frage1 == "1869":
         st.write("Richtig! Gandhi wurde 1869 geboren.")
     else:
-        st.write("Falsch. Die richtige Antwort ist 1869.")
+        st.write("Falsch")
 
     frage2 = st.radio(
         "Wo studierte Gandhi Jura?",
@@ -93,7 +93,7 @@ if st.session_state.get("page") == "quiz":
     if frage2 == "London":
         st.write("Richtig! Gandhi studierte in London.")
     else:
-        st.write("Falsch. Die richtige Antwort ist London.")
+        st.write("Falsch")
 
     frage3 = st.radio(
         "In welchem Land erlebte Gandhi Diskriminierung, die seine Philosophie prägte?",
@@ -102,7 +102,7 @@ if st.session_state.get("page") == "quiz":
     if frage3 == "Südafrika":
         st.write("Richtig! Gandhi erlebte Diskriminierung in Südafrika.")
     else:
-        st.write("Falsch. Die richtige Antwort ist Südafrika.")
+        st.write("Falsch")
 
     frage4 = st.radio(
         "Welches Prinzip war zentral für Gandhis Philosophie?",
@@ -111,7 +111,7 @@ if st.session_state.get("page") == "quiz":
     if frage4 == "Gewaltlosigkeit":
         st.write("Richtig! Gewaltlosigkeit war zentral für Gandhis Philosophie.")
     else:
-        st.write("Falsch. Die richtige Antwort ist Gewaltlosigkeit.")
+        st.write("Falsch")
 
     frage5 = st.radio(
         "Wann wurde Indien unabhängig?",
@@ -120,4 +120,4 @@ if st.session_state.get("page") == "quiz":
     if frage5 == "1947":
         st.write("Richtig! Indien wurde 1947 unabhängig.")
     else:
-        st.write("Falsch. Die richtige Antwort ist 1947.")
+        st.write("Falsch")
