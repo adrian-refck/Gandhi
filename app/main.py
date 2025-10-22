@@ -23,15 +23,15 @@ if "page" not in st.session_state:
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    if st.button("Audioinformation", type="primary", key="btn_audio"):
+    if st.button("Audioinformation", type="primary" , width="stretch" , key="btn_audio"):
         st.session_state["page"] = "audio"
 
 with col2:
-    if st.button("Testinformationen", type="primary", key="btn_info"):
+    if st.button("Testinformationen", type="primary" , width="stretch" , key="btn_info"):
         st.session_state["page"] = "info"
 
 with col3:
-    if st.button("Quiz", type="primary", key="btn_quiz"):
+    if st.button("Quiz", type="primary" , width="stretch", key="btn_quiz"):
         st.session_state["page"] = "quiz"
 
 if st.session_state.get("page") == "audio":
