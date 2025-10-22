@@ -29,7 +29,17 @@ with col3:
 
 if auswahl1:
     st.write("Lade Audioinformationen...")
-    st.audio("/workspaces/Gandhi/app/sounds/rel4.mp3", format="audio/mp3")
+    from pathlib import Path
+
+    sound_path = Path(__file__).parent / "sounds" / "rel4.mp3"
+    if not sound_path.exists():
+        st.error(f"Audio-Datei nicht gefunden: {sound_path}")
+    else:
+        try:
+            audio_bytes = sound_path.read_bytes()
+            st.audio(audio_bytes, format="audio/mp3")
+        except Exception as e:
+            st.error(f"Fehler beim Laden der Audio-Datei: {e}")
 
 if auswahl2:
     st.write("Lade Testinformationen...")
