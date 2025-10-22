@@ -15,19 +15,26 @@ with st.sidebar:
     st.markdown("https://www.bpb.de/cache/images/2/327612_galerie_lightbox_box_1000x666.jpg?83411")
 
 st.title("Willkommen zu Gandhis Leben")
- 
+
+# Session state default for page navigation
+if "page" not in st.session_state:
+    st.session_state["page"] = "home"
+
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    auswahl1 = st.button("Audioinformation", type="primary" , width="stretch")
+    if st.button("Audioinformation", type="primary", key="btn_audio"):
+        st.session_state["page"] = "audio"
 
 with col2:
-    auswahl2 = st.button("Testinformationen" , type="primary" , width="stretch")
+    if st.button("Testinformationen", type="primary", key="btn_info"):
+        st.session_state["page"] = "info"
 
 with col3:
-    auswahl3 = st.button("Quiz" , type="primary" , width="stretch")
+    if st.button("Quiz", type="primary", key="btn_quiz"):
+        st.session_state["page"] = "quiz"
 
-if auswahl1:
+if st.session_state.get("page") == "audio":
     st.write("Lade Audioinformationen...")
     from pathlib import Path
 
@@ -41,7 +48,7 @@ if auswahl1:
         except Exception as e:
             st.error(f"Fehler beim Laden der Audio-Datei: {e}")
 
-if auswahl2:
+if st.session_state.get("page") == "info":
     st.write("Lade Testinformationen...")
     st.header("Stationen seines Lebens")
     st.subheader("Kindheit + Studium")
@@ -73,9 +80,6 @@ if auswahl2:
 
 
 
-if auswahl3:
-    st.session_state["page"] = "quiz"
-    
 if st.session_state.get("page") == "quiz":    
     st.write("Lade Quiz...")
     st.header("Quiz zu Gandhis Leben")
@@ -123,3 +127,6 @@ if st.session_state.get("page") == "quiz":
         st.write("Richtig! Indien wurde 1947 unabhängig.")
     else:
         st.write("Falsch")
+    # Zurück-Button, um zur Startseite zurückzukehren
+    if st.button("Zurück zur Startseite", key="btn_back"):
+        st.session_state["page"] = "home"
