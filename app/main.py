@@ -71,6 +71,8 @@ if auswahl2:
     st.subheader("Probleme")
     st.write("Die Unabhängigkeit führte jedoch zur Teilung Indiens in die Indische Union und das muslimische Pakistan, begleitet von schweren Unruhen, bei denen etwa eine Million Menschen starben und über 15 Millionen zu Flüchtlingen wurden. Gandhi erlebte dies als persönliche Tragödie. Trotz aller Bemühungen, besonders in den gewaltgeprägten Zentren wie Kalkutta, konnte er die Gewalt nicht stoppen. Er wertete dieses Scheitern als persönliches Versagen, glaubte aber weiterhin an die unveränderliche Gültigkeit der Prinzipien von Wahrheit (satya) und Gewaltfreiheit (ahimsa), da die Wahrheit ewig und unzerstörbar sei.")
 
+
+
 if auswahl3:
     st.session_state["page"] = "quiz"
     
