@@ -112,7 +112,7 @@ if st.session_state.get("page") == "quiz":
 
     frage4 = st.radio(
         "Welches Prinzip war zentral für Gandhis Philosophie?",
-        ("Gewaltlosigkeit", "Reichtum", "Macht", "Krieg")
+        ("Glück", "Reichtum", "Macht", "Krieg", "Gewaltlosigkeit")
     )
     if frage4 == "Gewaltlosigkeit":
         st.write("Richtig! Gewaltlosigkeit war zentral für Gandhis Philosophie.")
